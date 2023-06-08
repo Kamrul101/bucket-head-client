@@ -5,7 +5,7 @@
       "numberOfStudents": 12,
       "instructorName": "John Smith",
       "availableSeats": 8,
-      "price": "$150",
+      "price": "150",
       "imageUrl": "https://i.ibb.co/yBQM0Xn/guitar.jpg"
     },
     {
@@ -14,7 +14,7 @@
       "numberOfStudents": 10,
       "instructorName": "Emily Johnson",
       "availableSeats": 5,
-      "price": "$200",
+      "price": "200",
       "imageUrl": "https://i.ibb.co/k1hmKxw/piano.jpg"
     },
     {
@@ -23,7 +23,7 @@
       "numberOfStudents": 17,
       "instructorName": "Michael Davis",
       "availableSeats": 3,
-      "price": "$180",
+      "price": "180",
       "imageUrl": "https://i.ibb.co/9pjj1Y4/drums.jpg"
     },
     {
@@ -32,7 +32,7 @@
       "numberOfStudents": 9,
       "instructorName": "Sarah Thompson",
       "availableSeats": 10,
-      "price": "$160",
+      "price": "160",
       "imageUrl": "https://i.ibb.co/LzFbqdg/vocal.jpg"
     },
     {
@@ -41,7 +41,7 @@
       "numberOfStudents": 20,
       "instructorName": "David Wilson",
       "availableSeats": 12,
-      "price": "$120",
+      "price": "120",
       "imageUrl": "https://i.ibb.co/6rSxdK6/music.jpg"
     },
     {
@@ -50,7 +50,7 @@
       "numberOfStudents": 6,
       "instructorName": "Michelle Brown",
       "availableSeats": 2,
-      "price": "$250",
+      "price": "250",
       "imageUrl": "https://i.ibb.co/0jjGRHF/song.jpg"
     },
     {
@@ -59,7 +59,7 @@
       "numberOfStudents": 10,
       "instructorName": "Christopher Lee",
       "availableSeats": 6,
-      "price": "$190",
+      "price": "190",
       "imageUrl": "https://i.ibb.co/RQw5KGP/keyboard.jpg"
     },
     {
@@ -68,7 +68,7 @@
       "numberOfStudents": 18,
       "instructorName": "Alex Turner",
       "availableSeats": 4,
-      "price": "$175",
+      "price": "175",
       "imageUrl": "https://i.ibb.co/RTBq7Pr/bass.jpg"
     },
     {
@@ -77,7 +77,7 @@
       "numberOfStudents": 12,
       "instructorName": "Olivia Martinez",
       "availableSeats": 7,
-      "price": "$140",
+      "price": "140",
       "imageUrl": "https://i.ibb.co/0ZHM66L/singing.jpg"
     },
     {
@@ -86,7 +86,7 @@
       "numberOfStudents": 13,
       "instructorName": "Daniel Johnson",
       "availableSeats": 5,
-      "price": "$220",
+      "price": "220",
       "imageUrl": "https://i.ibb.co/m9pFh5Q/dj.jpg"
     }
 ]

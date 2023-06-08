@@ -5,7 +5,7 @@ import TopClasses from '../Shared/TopClasses/TopClasses';
 
 const Home = () => {
     return (
-        <div className='w-3/4 mx-auto'>
+        <div className='md:w-3/4 md:mx-auto'>
             <Slider></Slider>
             <TopClasses></TopClasses>
         </div>
