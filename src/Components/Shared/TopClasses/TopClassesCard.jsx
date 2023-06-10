@@ -13,7 +13,6 @@ const TopClassesCard = ({ classItem }) => {
       <div className="card-body">
         <h2 className="card-title font-semibold">{className}</h2>
         <p className="text-gray-500 text-xl">Price: ${price}</p>
-        
       </div>
     </div>
   );
