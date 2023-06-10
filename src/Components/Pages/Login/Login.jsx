@@ -53,13 +53,13 @@ const Login = () => {
 
   return (
     
-        <div className="card w-full md:w-1/3 md:mx-auto shadow-2xl bg-black bg-opacity-90 text-white my-7 text-center ">
+        <div className="card w-full md:w-1/3 md:mx-auto shadow-2xl bg-base-100 my-7 text-center ">
           <div className="card-body">
           <h1 className="text-5xl font-bold">Login now!</h1>
             <form onSubmit={handleSignIn}>
                 <div className="form-control">
               <label className="label">
-                <span className="label-text text-white">Email</span>
+                <span className="label-text">Email</span>
               </label>
               <input
                 type="text"
@@ -70,7 +70,7 @@ const Login = () => {
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text text-white">Password</span>
+                <span className="label-text">Password</span>
               </label>
               <input
                 type="text"
@@ -78,7 +78,11 @@ const Login = () => {
                 name="password"
                 className="input input-bordered"
               />
-              
+              <label className="label">
+                <a href="#" className="label-text-alt link link-hover">
+                  Forgot password?
+                </a>
+              </label>
             </div>
             <div className="form-control mt-6">
               
