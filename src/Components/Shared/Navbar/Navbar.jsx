@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import logo from '../../../assets/logo.png'
+import { FaUserCircle } from "react-icons/fa";
+import { AuthContext } from "../../../Providers/AuthProviders";
 
 const Navbar = () => {
+
+  const {user, logOut} = useContext(AuthContext);
+  const handleLogOut =() =>{
+    logOut()
+    .then(()=>{})
+    .catch(error => console.log(error))
+  }
+
     const navOption = <>
-    <li><Link to='/'>Home</Link></li>
-    <li><Link to='/'>Instructors</Link></li>
-    <li><Link to='/'>Classes</Link></li>
-    <li><Link to='/'>Dashboard</Link></li>
+    <li className="hover:bg-slate-300 rounded-xl"><Link to='/'>Home</Link></li>
+    <li className="hover:bg-slate-300 rounded-xl"><Link to='/'>Instructors</Link></li>
+    <li className="hover:bg-slate-300 rounded-xl"><Link to='/'>Classes</Link></li>
+    <li className="hover:bg-slate-300 rounded-xl"><Link to='/'>Dashboard</Link></li>
     </>
   return (
     <>
-      <div className="navbar fixed z-10 bg-opacity-30 bg-orange-800 text-white py-3">
+      <div className="navbar bg-opacity-50 bg-black text-white py-1 mb-10">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -43,13 +53,35 @@ const Navbar = () => {
         </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 text-2xl">
             {navOption}
           </ul>
         </div>
         <div className="navbar-end">
-        <Link className="btn btn-error text-white mr-3" to='/login'>Logout</Link>
-        <Link className="btn btn-error text-white" to='/login'>Login</Link>
+        {user && (
+            <>
+              {user.photoURL == null ? (
+                <FaUserCircle className="text-5xl mr-2"></FaUserCircle>
+              ) : (
+                <div
+                  className="mr-2 tooltip tooltip-bottom"
+                  data-tip={user.displayName}
+                  style={{ width: "55px" }}
+                  alt=""
+                >
+                  <img
+                    className="rounded-full mr-2"
+                    src={user.photoURL}
+                    alt=""
+                  />
+                </div>
+              )}
+            </>
+          )}
+        {
+            user? <Link onClick={handleLogOut} className="btn btn-error text-white" to='/login'>Logout</Link>:<Link className="btn btn-error text-white" to='/login'>Login</Link>
+        }
+
         </div>
       </div>
     </>
