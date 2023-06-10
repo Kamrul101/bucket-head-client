@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProviders";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import { FaEye } from "react-icons/fa";
 
 
 const Register = () => {
@@ -10,9 +11,20 @@ const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     
     
+    
     const navigate = useNavigate()
     const onSubmit = data => {
         console.log(data)
+        if(data.password != data.confirm){
+            Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: "Password didn't match",
+                showConfirmButton: false,
+                timer: 1500
+              });
+            return;
+        }
         createUser(data.email, data.password)
         .then(result =>{
             const loggedUser = result.user;
@@ -27,7 +39,7 @@ const Register = () => {
                     showConfirmButton: false,
                     timer: 1500
                   });
-                  navigate('/')
+                  
             })
         })
     };
@@ -68,14 +80,29 @@ const Register = () => {
               <span className="label-text">Password</span>
             </label>
             <input
-              type="text"
-              placeholder="Password"
-              {...register("password",{ required: true, minLength: 8,  pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/ })}
+              type='password'
+              placeholder='Password'
+              {...register("password",{ required: true, minLength: 8,  pattern: /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{6,}$/ })}
               name="password"
               className="input input-bordered"
+              
             />
             {errors.password?.type === 'minLength' && <p  className="text-red-500">Minimum 8 characters long</p>}
-              {errors.password?.type === 'pattern' && <p className="text-red-500">One Uppercase and lowercase and one digit</p>}
+              {errors.password?.type === 'pattern' && <p className="text-red-500">At least one Uppercase, lowercase, one digit and special character</p>}
+            
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Confirm Password</span>
+            </label>
+            <input
+              type="password"
+              placeholder="Confirm password"
+              {...register("confirm")}
+              name="confirm"
+              
+              className="input input-bordered"
+            />
             
           </div>
           <div className="form-control">
