@@ -3,7 +3,7 @@
       "id": "12345",
       "className": "Guitar Basics",
       "numberOfStudents": 12,
-      "instructorName": "John Smith",
+      "instructorName": "Ibrahim Ahmed Kamal",
       "availableSeats": 8,
       "price": "150",
       "imageUrl": "https://i.ibb.co/yBQM0Xn/guitar.jpg"
@@ -12,7 +12,7 @@
       "id": "67890",
       "className": "Piano Masterclass",
       "numberOfStudents": 10,
-      "instructorName": "Emily Johnson",
+      "instructorName": "Shishir Ahmed",
       "availableSeats": 5,
       "price": "200",
       "imageUrl": "https://i.ibb.co/k1hmKxw/piano.jpg"
@@ -21,7 +21,7 @@
       "id": "23456",
       "className": "Drums 101",
       "numberOfStudents": 17,
-      "instructorName": "Michael Davis",
+      "instructorName": "Avoid Rafa",
       "availableSeats": 3,
       "price": "180",
       "imageUrl": "https://i.ibb.co/9pjj1Y4/drums.jpg"
@@ -30,7 +30,7 @@
       "id": "78901",
       "className": "Vocal Training",
       "numberOfStudents": 9,
-      "instructorName": "Sarah Thompson",
+      "instructorName": "Avoid Rafa",
       "availableSeats": 10,
       "price": "160",
       "imageUrl": "https://i.ibb.co/LzFbqdg/vocal.jpg"
@@ -39,7 +39,7 @@
       "id": "34567",
       "className": "Music Theory Fundamentals",
       "numberOfStudents": 20,
-      "instructorName": "David Wilson",
+      "instructorName": "Probar Ripon",
       "availableSeats": 12,
       "price": "120",
       "imageUrl": "https://i.ibb.co/6rSxdK6/music.jpg"
@@ -48,7 +48,7 @@
       "id": "89012",
       "className": "Songwriting Workshop",
       "numberOfStudents": 6,
-      "instructorName": "Michelle Brown",
+      "instructorName": "Probar Ripon",
       "availableSeats": 2,
       "price": "250",
       "imageUrl": "https://i.ibb.co/0jjGRHF/song.jpg"
@@ -57,7 +57,7 @@
       "id": "45678",
       "className": "Keyboard Essentials",
       "numberOfStudents": 10,
-      "instructorName": "Christopher Lee",
+      "instructorName": "Shishir",
       "availableSeats": 6,
       "price": "190",
       "imageUrl": "https://i.ibb.co/RQw5KGP/keyboard.jpg"
@@ -66,7 +66,7 @@
       "id": "90123",
       "className": "Bass Guitar Techniques",
       "numberOfStudents": 18,
-      "instructorName": "Alex Turner",
+      "instructorName": "BassBaba Shumon",
       "availableSeats": 4,
       "price": "175",
       "imageUrl": "https://i.ibb.co/RTBq7Pr/bass.jpg"
@@ -75,7 +75,7 @@
       "id": "56789",
       "className": "Singing Ensemble",
       "numberOfStudents": 12,
-      "instructorName": "Olivia Martinez",
+      "instructorName": "Pritom Hasan",
       "availableSeats": 7,
       "price": "140",
       "imageUrl": "https://i.ibb.co/0ZHM66L/singing.jpg"
@@ -84,7 +84,7 @@
       "id": "23451",
       "className": "DJ Mixing Course",
       "numberOfStudents": 13,
-      "instructorName": "Daniel Johnson",
+      "instructorName": "Pritom Hasan",
       "availableSeats": 5,
       "price": "220",
       "imageUrl": "https://i.ibb.co/m9pFh5Q/dj.jpg"
