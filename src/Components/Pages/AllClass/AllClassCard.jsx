@@ -2,9 +2,12 @@ import React, { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProviders";
 import useCart from "../../../Hooks/useCart";
 import Swal from "sweetalert2";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const AllClassCard = ({ singleClass }) => {
     const {user} = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
     const [,refetch]=useCart();
   const { _id, imageUrl, className, price,instructorName, numberOfStudents,
     availableSeats
@@ -24,18 +27,29 @@ const AllClassCard = ({ singleClass }) => {
           .then(data =>{
             if(data.insertedId){
               refetch();
-              Swal.fire(
-                'Good job!',
-                'You added to cart',
-                'success'
-              )
+              Swal.fire({
+                
+                icon: 'success',
+                title: 'Class is being added',
+                showConfirmButton: false,
+                timer: 1500
+              })
             }
           })
         }
         else{
-          Swal.fire(
-            'Please Login!',
-          )
+            Swal.fire({
+                title: 'Please login to book the class',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Login now!'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  navigate('/login', {state: {from: location}})
+                }
+              })
         }
       }
   return (
