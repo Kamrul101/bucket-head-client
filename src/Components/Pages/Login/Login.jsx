@@ -3,10 +3,12 @@ import { Link, useLocation, useNavigate} from "react-router-dom";
 import { FaBeer,FaGoogle  } from 'react-icons/fa';
 import { AuthContext } from "../../../Providers/AuthProviders";
 import { GoogleAuthProvider } from "firebase/auth";
+import { useForm } from "react-hook-form";
 
 
 
 const Login = () => {
+  const { register, handleSubmit, formState: { errors } } = useForm();
 
     const googleProvider = new GoogleAuthProvider();
     
@@ -18,14 +20,10 @@ const Login = () => {
 
    const [error,setError] = useState('');
 
-   const handleSignIn = event =>{
-    event.preventDefault();
-    const form = event.target;
-    const email = form.email.value;
-    const password = form.password.value;
-    console.log(email,password);
+   const onSubmit = event =>{
+    console.log(event);
     setError('');
-    signInUser(email,password)
+    signInUser(event.email,event.password)
     .then(result =>{
       const loggedUser = result.user;
       console.log(loggedUser);
@@ -56,7 +54,7 @@ const Login = () => {
         <div className="card w-full md:w-1/3 md:mx-auto shadow-2xl bg-base-100 my-7 text-center ">
           <div className="card-body">
           <h1 className="text-5xl font-bold">Login now!</h1>
-            <form onSubmit={handleSignIn}>
+            <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -64,6 +62,7 @@ const Login = () => {
               <input
                 type="text"
                 placeholder="email"
+                {...register("email")}
                 name="email"
                 className="input input-bordered"
               />
@@ -73,8 +72,9 @@ const Login = () => {
                 <span className="label-text">Password</span>
               </label>
               <input
-                type="text"
+                type="password"
                 placeholder="password"
+                {...register("password")}
                 name="password"
                 className="input input-bordered"
               />

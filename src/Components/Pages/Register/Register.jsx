@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProviders";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-import { FaEye } from "react-icons/fa";
+
 
 
 const Register = () => {
@@ -12,7 +12,7 @@ const Register = () => {
     
     
     
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const onSubmit = data => {
         console.log(data)
         if(data.password != data.confirm){
@@ -33,9 +33,9 @@ const Register = () => {
             .then(()=>{
                 console.log("user profile updated");
                 Swal.fire({
-                    position: 'top-end',
+                    
                     icon: 'success',
-                    title: 'Account created successfully',
+                    title: 'Registered successfully',
                     showConfirmButton: false,
                     timer: 1500
                   });
