@@ -10,7 +10,7 @@ const Banner = () => {
     <div>
       <h1 className="text-5xl font-bold">Welcome to <span className='text-orange-500'>Bucket Head</span></h1>
       <p className="py-6">We provide the best action figure toys for our beloved otaku's in the world. We have the largest collection in the world. We will try to provide you the best collection and product.</p>
-      <button className="btn bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white"><Link to='/allToys'>See Collection</Link></button>
+      <button className="btn bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white"><Link to='/allClass'>See Courses</Link></button>
     </div>
   </div>
 </div>

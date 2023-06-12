@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 import logo from '../../../assets/logo.png'
 import { FaUserCircle } from "react-icons/fa";
 import { AuthContext } from "../../../Providers/AuthProviders";
+import useCart from "../../../Hooks/useCart";
 
 const Navbar = () => {
 
   const {user, logOut} = useContext(AuthContext);
+  const [cart]=useCart();
   const handleLogOut =() =>{
     logOut()
     .then(()=>{})
@@ -17,7 +19,7 @@ const Navbar = () => {
     <li className="hover:bg-slate-300 rounded-xl"><Link to='/'>Home</Link></li>
     <li className="hover:bg-slate-300 rounded-xl"><Link to='/'>Instructors</Link></li>
     <li className="hover:bg-slate-300 rounded-xl"><Link to='/allClass'>Classes</Link></li>
-    <li className="hover:bg-slate-300 rounded-xl"><Link to='/dashboard'>Dashboard</Link></li>
+    <li className="hover:bg-slate-300 rounded-xl"><Link to='/dashboard'>Dashboard <span className="badge badge-success">+{cart?.length || 0}</span></Link></li>
     </>
   return (
     <>
