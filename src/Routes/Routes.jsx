@@ -6,6 +6,7 @@ import Register from "../Components/Pages/Register/Register";
 import AllClass from "../Components/Pages/AllClass/AllClass";
 import DashboardLayout from "../Layouts/DashBoardLayout";
 import MyCart from "../Components/Pages/Dashboard/Cart/MyCart";
+import AllUsers from "../Components/Pages/Dashboard/AllUsers/AllUsers";
 
 const router = createBrowserRouter([
     {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         {
           path:'/dashboard/myCart',
           element:<MyCart></MyCart>
+        },
+        {
+          path:'/dashboard/allUser',
+          element:<AllUsers></AllUsers>
         }
         
       ]

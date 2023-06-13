@@ -8,6 +8,8 @@ import {
   FaHome,
   FaHamburger,
   FaList,
+  FaUserFriends,
+  FaBookOpen,
 } from "react-icons/fa";
 import {
   Fade,
@@ -18,6 +20,8 @@ import {
   Zoom,
 } from "react-awesome-reveal";
 const DashboardLayout = () => {
+
+  const isAdmin = true;
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -34,7 +38,54 @@ const DashboardLayout = () => {
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
         <ul className="menu p-4 w-80 h-full text-2xl">
           {/* Sidebar content here */}
+          {
+            isAdmin ? <>
+            
+            <li>
+            <NavLink to="/dashboard/history">
+              <Bounce>
+                <FaUserFriends></FaUserFriends>
+              </Bounce>
+               Manage Users
+            </NavLink>
+          </li>
+
           <li>
+            <NavLink to="/dashboard/myCart">
+              <JackInTheBox>
+                <FaBookOpen></FaBookOpen>
+              </JackInTheBox>
+              Manage Class
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/dashboard/home">
+              <Flip>
+                <FaHome></FaHome>
+              </Flip>
+              User Home
+            </NavLink>
+          </li>
+          <div className="divider"></div>
+          <li>
+            <NavLink to="/">
+              <Slide>
+                <FaHome></FaHome>
+              </Slide>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/allClass">
+              <Zoom>
+                <FaList></FaList>
+              </Zoom>
+              All Class
+            </NavLink>
+          </li>
+            </>:<>
+            <li>
             <NavLink to="/dashboard/history">
               <Bounce>
                 <FaWallet></FaWallet>
@@ -77,6 +128,10 @@ const DashboardLayout = () => {
               My Enrolled Class
             </NavLink>
           </li>
+            
+            </>
+          }
+          
         </ul>
       </div>
     </div>
