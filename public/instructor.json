@@ -4,56 +4,64 @@
       "photo": "https://i.ibb.co/C1yd1mp/rafa.jpg",
       "instructorName": "Avoid Rafa",
       "instructorEmail": "rafa@gmail.com",
-      "numberOfStudents": 20
+      "numberOfStudents": 20,
+      "availableSeats":17
     },
     {
       "id": 10002,
       "photo": "https://i.ibb.co/DVTV6Ly/probar.jpg",
       "instructorName": "Probar Ripon",
       "instructorEmail": "ripon@gmail.com",
-      "numberOfStudents": 15
+      "numberOfStudents": 15,
+      "availableSeats":7
     },
     {
       "id": 10003,
       "photo": "https://i.ibb.co/hBZsXCn/ibrahim.jpg",
       "instructorName": "Ibrahim Ahmed Kamal",
       "instructorEmail": "kamal@gmail.com",
-      "numberOfStudents": 12
+      "numberOfStudents": 12,
+      "availableSeats":13
     },
     {
       "id": 10004,
       "photo": "https://i.ibb.co/QpV0ss5/oni.jpg",
       "instructorName": "Oni Hasan",
       "instructorEmail": "oni@gmail.com",
-      "numberOfStudents": 18
+      "numberOfStudents": 18,
+      "availableSeats":12
     },
     {
       "id": 10005,
       "photo": "https://i.ibb.co/mvsZb5h/pritom.jpg",
       "instructorName": "Pritom Hasan",
       "instructorEmail": "pritom@gmail.com",
-      "numberOfStudents": 10
+      "numberOfStudents": 10,
+      "availableSeats":5
     },
     {
       "id": 10006,
       "photo": "https://i.ibb.co/0ZD7GFD/shumon.jpg",
       "instructorName": "BassBaba Shumon",
       "instructorEmail": "shumon@gmail.com",
-      "numberOfStudents": 16
+      "numberOfStudents": 16,
+      "availableSeats":14
     },
     {
       "id": 10007,
       "photo": "https://i.ibb.co/HTrPknT/arnob.jpg",
       "instructorName": "Arnob",
       "instructorEmail": "arnob@gmail.com",
-      "numberOfStudents": 15
+      "numberOfStudents": 15,
+      "availableSeats":10
     },
     {
       "id": 10008,
       "photo": "https://i.ibb.co/XZZ3Zh4/shishir.jpg",
       "instructorName": "Shishir Ahmed",
       "instructorEmail": "shishir@gmail.com",
-      "numberOfStudents": 8
+      "numberOfStudents": 8,
+      "availableSeats":15
     }
   ]
   

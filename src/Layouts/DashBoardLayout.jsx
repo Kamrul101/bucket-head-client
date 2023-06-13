@@ -95,7 +95,7 @@ const DashboardLayout = () => {
             
             isInstructor ? <>
             <li>
-            <NavLink to="/dashboard/history">
+            <NavLink to="/dashboard/addClass">
               <Bounce>
                 <FaFileUpload></FaFileUpload>
               </Bounce>
