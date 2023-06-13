@@ -2,7 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import { FaTrashAlt, FaUserShield } from "react-icons/fa";
 import Swal from "sweetalert2";
-import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+import useAxiosSecure from "../../../../Hooks/useAxiosSecure";
+
 
 const AllUsers = () => {
     const [axiosSecure] = useAxiosSecure();

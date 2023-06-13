@@ -19,9 +19,10 @@ import {
   Slide,
   Zoom,
 } from "react-awesome-reveal";
+import UseAdmin from "../Hooks/UseAdmin";
 const DashboardLayout = () => {
 
-  const isAdmin = true;
+  const [isAdmin]= UseAdmin();
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
