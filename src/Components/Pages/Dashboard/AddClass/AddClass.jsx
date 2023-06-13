@@ -1,14 +1,39 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../../../Hooks/useAuth';
+import Swal from 'sweetalert2';
 
 const AddClass = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const {user}= useAuth();
 
     const onSubmit = data =>{
+        const {className,imageUrl,instructorName,instructorEmail,availableSeats,price}=data;
+        // const prices = parseFloat(price);
+        const classes = {className,imageUrl,instructorName,instructorEmail,availableSeats: parseInt(availableSeats),price: parseFloat(price)};
+        console.log(classes);
+
+        fetch("http://localhost:5000/class", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(classes),
+    })
+      .then((res) => res.json())
+      .then((data) => {
         console.log(data);
-        const {}= data;
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Success",
+            text: "Class added successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+        }
+      });
+        
+        
     }
     return (
         <div className="bg-[#e7e5e4] p-5 rounded-lg w-1/2   mb-5">
@@ -27,7 +52,8 @@ const AddClass = () => {
                 type="text"
                 placeholder="Photo url"
                 className="input input-bordered w-full"
-                name="photo"
+                {...register("imageUrl")}
+                name="imageUrl"
                 required
               />
             </label>
@@ -44,8 +70,8 @@ const AddClass = () => {
                 type="text"
                 placeholder="Class name"
                 className="input input-bordered w-full"
-                {...register("name")}
-                name="name"
+                {...register("className")}
+                name="className"
                 
                 required
               />
@@ -84,9 +110,7 @@ const AddClass = () => {
                 className="input input-bordered w-full"
                 {...register("instructorEmail")}
                 name="instructorEmail"
-                defaultValue={user?.email}
-                
-                
+                defaultValue={user?.email}   
               />
             </label>
           </div>
