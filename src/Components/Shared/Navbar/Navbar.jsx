@@ -17,7 +17,7 @@ const Navbar = () => {
 
     const navOption = <>
     <li className="hover:bg-slate-300 rounded-xl"><Link to='/'>Home</Link></li>
-    <li className="hover:bg-slate-300 rounded-xl"><Link to='/'>Instructors</Link></li>
+    <li className="hover:bg-slate-300 rounded-xl"><Link to='/allInstructor'>Instructors</Link></li>
     <li className="hover:bg-slate-300 rounded-xl"><Link to='/allClass'>Classes</Link></li>
     <li className="hover:bg-slate-300 rounded-xl"><Link to='/dashboard'>Dashboard <span className="badge badge-success">+{cart?.length || 0}</span></Link></li>
     </>

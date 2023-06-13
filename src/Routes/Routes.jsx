@@ -7,6 +7,8 @@ import AllClass from "../Components/Pages/AllClass/AllClass";
 import DashboardLayout from "../Layouts/DashBoardLayout";
 import MyCart from "../Components/Pages/Dashboard/Cart/MyCart";
 import AllUsers from "../Components/Pages/Dashboard/AllUsers/AllUsers";
+import AllInstructor from "../Components/Pages/AllInstructor/AllInstructor";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -29,13 +31,17 @@ const router = createBrowserRouter([
           path: '/allClass',
           element:<AllClass></AllClass>
         },
+        {
+          path: '/allInstructor',
+          element:<AllInstructor></AllInstructor>
+        },
       
       ]
       
     },
     {
       path:'/dashboard',
-      element:<DashboardLayout></DashboardLayout>,
+      element:<PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
       children:[
         {
           path:'/dashboard/myCart',

@@ -14,7 +14,7 @@ const TopClasses = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 mx-2 mt-5">
         {
             topClasses.map(classItem=> <TopClassesCard
-            key={classItem.id}
+            key={classItem._id}
             classItem={classItem}
             ></TopClassesCard>)
         }

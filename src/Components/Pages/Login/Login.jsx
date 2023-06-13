@@ -38,10 +38,22 @@ const Login = () => {
    const handleGoogle = () =>{
     signInWithGoogle(googleProvider)
     .then((result) => {
-        const user = result.user;
+        const loggedUser = result.user;
         // setUser(user);
-        console.log(user);
-        navigate(from, {replace:true})
+        console.log(loggedUser);
+        const saveUser = {name: loggedUser.displayName, email:loggedUser.email, photo: loggedUser.photoURL}
+        fetch('http://localhost:5000/users',{
+                  method:"POST",
+                  headers:{
+                    'content-type':'application/json'
+                  },
+                  body:JSON.stringify(saveUser)
+                })
+                .then(res=>res.json())
+                .then(()=> {
+                    navigate(from, { replace: true });
+                  
+                })
       })
       .catch((error) => {
         const errorMessage = error.message;

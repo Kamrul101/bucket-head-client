@@ -31,14 +31,28 @@ const Register = () => {
             console.log(loggedUser);
             updateUserProfile(data.name, data.photo)
             .then(()=>{
-                console.log("user profile updated");
-                Swal.fire({
-                    
-                    icon: 'success',
-                    title: 'Registered successfully',
-                    showConfirmButton: false,
-                    timer: 1500
-                  });
+              const saveUser = {name: data.name, email:data.email,photo: data.photo}
+              fetch('http://localhost:5000/users',{
+                method:"POST",
+                headers:{
+                  'content-type':'application/json'
+                },
+                body:JSON.stringify(saveUser)
+              })
+              .then(res=>res.json())
+              .then(data=> {
+                if(data.insertedId){
+                  Swal.fire({
+                  position: 'top-end',
+                  icon: 'success',
+                  title: 'Your work has been saved',
+                  showConfirmButton: false,
+                  timer: 1500
+                });
+                }
+              })
+              
+                navigate('/')
                   
             })
         })
