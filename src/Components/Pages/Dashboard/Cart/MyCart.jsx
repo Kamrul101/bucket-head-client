@@ -3,6 +3,7 @@ import React from "react";
 import MyCartCard from "./MyCartCard";
 import Swal from "sweetalert2";
 import useCart from "../../../../Hooks/useCart";
+import { Link } from "react-router-dom";
 
 const MyCart = () => {
   const [cart, refetch] = useCart();
@@ -38,7 +39,7 @@ const MyCart = () => {
       <div className="font-semibold flex justify-evenly py-5">
         <h2 className="text-3xl">Total Items: {cart.length}</h2>
         <h2 className="text-3xl">Total Price: ${total}</h2>
-        <button className="btn btn-warning btn-sm">Pay</button>
+        <Link to='/dashboard/payment'><button className="btn btn-warning btn-sm">Pay</button></Link>
       </div>
       <div className="overflow-x-auto">
         <table className="table">

@@ -14,6 +14,7 @@ import InstructorRoute from "./InstructorRoute";
 import ManageClass from "../Components/Pages/Dashboard/ManageClass/ManageClass";
 import AdminRoute from "./AdminRoute";
 import AdminManageClass from "../Components/Pages/Dashboard/AdminManageClass/AdminManageClass";
+import Payment from "../Components/Pages/Dashboard/Payment/Payment";
 
 const router = createBrowserRouter([
     {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
         {
           path:'/dashboard/myCart',
           element:<MyCart></MyCart>
+        },
+        {
+          path:'/dashboard/payment',
+          element:<Payment></Payment>
         },
         {
           path:'manageAllClass',

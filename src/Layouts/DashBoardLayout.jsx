@@ -22,7 +22,6 @@ import {
   Zoom,
 } from "react-awesome-reveal";
 import UseAdmin from "../Hooks/UseAdmin";
-import useInstructors from "../Hooks/useInstructors";
 import UseInstructorRole from "../Hooks/UseInstructorRole";
 const DashboardLayout = () => {
 
