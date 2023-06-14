@@ -58,7 +58,7 @@ const DashboardLayout = () => {
           </li>
 
           <li>
-            <NavLink to="/dashboard/myCart">
+            <NavLink to="/dashboard/manageAllClass">
               <JackInTheBox>
                 <FaBookOpen></FaBookOpen>
               </JackInTheBox>
@@ -104,7 +104,7 @@ const DashboardLayout = () => {
           </li>
 
           <li>
-            <NavLink to="/dashboard/myCart">
+            <NavLink to="/dashboard/manageClass">
               <JackInTheBox>
                 <FaBook></FaBook>
               </JackInTheBox>

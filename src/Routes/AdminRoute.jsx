@@ -1,6 +1,5 @@
 import React from 'react';
-import { useContext } from 'react';
-import { authContext } from '../Providers/AuthProviders';
+
 import { Navigate, useLocation } from 'react-router-dom';
 
 import UseAdmin from '../Hooks/UseAdmin';
