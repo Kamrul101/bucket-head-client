@@ -23,6 +23,7 @@ import {
 } from "react-awesome-reveal";
 import UseAdmin from "../Hooks/UseAdmin";
 import UseInstructorRole from "../Hooks/UseInstructorRole";
+
 const DashboardLayout = () => {
 
 
@@ -64,15 +65,6 @@ const DashboardLayout = () => {
               Manage Class
             </NavLink>
           </li>
-
-          <li>
-            <NavLink to="/dashboard/home">
-              <Flip>
-                <FaHome></FaHome>
-              </Flip>
-              User Home
-            </NavLink>
-          </li>
           <div className="divider"></div>
           <li>
             <NavLink to="/">
@@ -111,14 +103,6 @@ const DashboardLayout = () => {
             </NavLink>
           </li>
 
-          <li>
-            <NavLink to="/dashboard/home">
-              <Flip>
-                <FaHome></FaHome>
-              </Flip>
-              User Home
-            </NavLink>
-          </li>
           <div className="divider"></div>
           <li>
             <NavLink to="/">
@@ -126,14 +110,6 @@ const DashboardLayout = () => {
                 <FaHome></FaHome>
               </Slide>
               Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/menu">
-              <Zoom>
-                <FaList></FaList>
-              </Zoom>
-              My Enrolled Class
             </NavLink>
           </li>
             
@@ -157,15 +133,6 @@ const DashboardLayout = () => {
               My Selected Class
             </NavLink>
           </li>
-
-          <li>
-            <NavLink to="/dashboard/home">
-              <Flip>
-                <FaHome></FaHome>
-              </Flip>
-              User Home
-            </NavLink>
-          </li>
           <div className="divider"></div>
           <li>
             <NavLink to="/">
@@ -176,7 +143,7 @@ const DashboardLayout = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/menu">
+            <NavLink>
               <Zoom>
                 <FaList></FaList>
               </Zoom>

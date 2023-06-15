@@ -8,12 +8,12 @@ const AddClass = () => {
     const {user}= useAuth();
 
     const onSubmit = data =>{
-        const {className,imageUrl,instructorName,instructorEmail,availableSeats,price}=data;
+        const {className,imageUrl,instructorName,instructorEmail,availableSeats,price,id}=data;
         // const prices = parseFloat(price);
-        const classes = {className,imageUrl,instructorName,instructorEmail,availableSeats: parseInt(availableSeats),price: parseFloat(price)};
+        const classes = {id,className,imageUrl,instructorName,instructorEmail,availableSeats: parseInt(availableSeats),price: parseFloat(price)};
         console.log(classes);
 
-        fetch("http://localhost:5000/class", {
+        fetch("https://summer-school-server-two.vercel.app/class", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -111,6 +111,23 @@ const AddClass = () => {
                 {...register("instructorEmail")}
                 name="instructorEmail"
                 defaultValue={user?.email}   
+              />
+            </label>
+          </div>
+        </div>
+        <div className="w-full mb-4">
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Class ID</span>
+            </label>
+            <label className="input-group">
+              <input
+                type="text"
+                placeholder="Class ID"
+                className="input input-bordered w-full"
+                {...register("id")}
+                name="id"
+                required 
               />
             </label>
           </div>

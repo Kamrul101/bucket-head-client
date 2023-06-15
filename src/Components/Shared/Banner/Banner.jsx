@@ -9,7 +9,7 @@ const Banner = () => {
     <img src={img1} className="rounded-lg shadow-2xl md:w-1/2 w-full h-1/2 md:mr-8 " />
     <div>
       <h1 className="text-5xl font-bold">Welcome to <span className='text-orange-500'>Bucket Head</span></h1>
-      <p className="py-6">We provide the best action figure toys for our beloved otaku's in the world. We have the largest collection in the world. We will try to provide you the best collection and product.</p>
+      <p className="py-6">We provide the best instructor and their classes. Join with them, learn with them and grow up you passion</p>
       <button className="btn bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white"><Link to='/allClass'>See Courses</Link></button>
     </div>
   </div>

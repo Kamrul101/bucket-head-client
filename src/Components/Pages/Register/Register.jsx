@@ -32,7 +32,7 @@ const Register = () => {
             updateUserProfile(data.name, data.photo)
             .then(()=>{
               const saveUser = {name: data.name, email:data.email,photo: data.photo}
-              fetch('http://localhost:5000/users',{
+              fetch('https://summer-school-server-two.vercel.app/users',{
                 method:"POST",
                 headers:{
                   'content-type':'application/json'

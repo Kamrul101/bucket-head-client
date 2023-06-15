@@ -15,11 +15,14 @@ import ManageClass from "../Components/Pages/Dashboard/ManageClass/ManageClass";
 import AdminRoute from "./AdminRoute";
 import AdminManageClass from "../Components/Pages/Dashboard/AdminManageClass/AdminManageClass";
 import Payment from "../Components/Pages/Dashboard/Payment/Payment";
+import PaymentHistory from "../Components/Pages/Dashboard/Payment/PaymentHistory";
+import Error from "../Components/Pages/Error/Error";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout></MainLayout>,
+      errorElement:<Error></Error>,
       children:[
         {
           path:'/',
@@ -48,10 +51,15 @@ const router = createBrowserRouter([
     {
       path:'/dashboard',
       element:<PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
+      errorElement:<Error></Error>,
       children:[
         {
           path:'/dashboard/myCart',
           element:<MyCart></MyCart>
+        },
+        {
+          path:'/dashboard/history',
+          element:<PaymentHistory></PaymentHistory>
         },
         {
           path:'/dashboard/payment',
@@ -63,7 +71,7 @@ const router = createBrowserRouter([
         },
         {
           path:'/dashboard/allUser',
-          element:<AdminRoute><AllUsers></AllUsers></AdminRoute>
+          element:<AllUsers></AllUsers>
         },
         {
           path: '/dashboard/addClass',

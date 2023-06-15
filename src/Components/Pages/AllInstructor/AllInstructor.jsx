@@ -12,7 +12,7 @@ const AllInstructor = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 mx-2 mt-5">
         {
             instructors.map(singleInstructor=> <AllInstructorCard
-            key={singleInstructor._id}
+            key={singleInstructor.id}
             singleInstructor={singleInstructor}
             ></AllInstructorCard>)
         }

@@ -9,14 +9,14 @@ const AllClassCard = ({ singleClass }) => {
     const navigate = useNavigate();
     const location = useLocation();
     const [,refetch]=useCart();
-  const { _id, imageUrl, className, price,instructorName, numberOfStudents,
+  const { id,_id, imageUrl, className, price,instructorName, numberOfStudents,
     availableSeats
     } = singleClass;
     const handleAddToCart = singleClass=>{
         console.log(singleClass);
         if(user && user.email ){
-          const cartItem ={itemId: _id,imageUrl,price,instructorName,className,email:user.email}
-          fetch('http://localhost:5000/cart',{
+          const cartItem ={itemId: _id,imageUrl,price,instructorName,className,email:user.email,id}
+          fetch('https://summer-school-server-two.vercel.app/cart',{
             method: "POST",
             headers:{
               "content-type":"application/json"
